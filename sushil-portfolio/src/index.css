@@ -13,3 +13,18 @@ h1,h2 {
     background: linear-gradient(-45deg, #302b63, #00bf8f, #1cd8d2);
   }
 }
+
+@keyframes starFade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+.animate-starFade {
+  animation: starFade 0.6s ease-out forwards;
+}
