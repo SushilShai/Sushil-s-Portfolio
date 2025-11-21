@@ -39,6 +39,7 @@ export default function StarCursor() {
             transform: "translate(-50%, -50%)",
             background: "white",
             boxShadow: `0 0 ${star.glow}px white`,
+            zIndex: 999999,
           }}
         />
       ))}
