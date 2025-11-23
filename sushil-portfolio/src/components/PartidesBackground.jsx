@@ -75,7 +75,7 @@ export default function PartidesBackground(){
     },[])
 
     return(
-        <canvas className="fixed top-0 left-0 w-full h-full pointer-events-none z-0" ref = {canvasRef}>
+        <canvas className="absolute top-0 left-0 w-full h-full pointer-events-none z-0" ref = {canvasRef}>
 
         </canvas>
     )
