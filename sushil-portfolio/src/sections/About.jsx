@@ -18,7 +18,7 @@ export default function About() {
         {glows.map((c, i) => (
           <div
             key={i}
-            className={`absolute rounded-full bg-gradient-to-r from-[#302b63] via-[#1cd8d2] animate-pulse ${c}`}
+            className={`absolute rounded-full bg-linear-to-r from-[#302b63] via-[#1cd8d2] animate-pulse ${c}`}
           ></div>
         ))}
       </div>
