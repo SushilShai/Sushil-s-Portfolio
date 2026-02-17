@@ -10,6 +10,7 @@ import Footer from "./sections/Footer"
 import CustomCursor from "./components/CustomCursor"
 import React from "react"
 import IntroAnimation from "./components/IntroAnimation"
+
 // import PartidesBackground from "./components/PartidesBackground"
 
 export default function App(){
@@ -22,7 +23,7 @@ export default function App(){
     <div className="relative gradient text-white">
       <CustomCursor/>
       {/* <PartidesBackground/> */}
-
+  
       <Navbar/>
       <Home/>
       <About/>
@@ -32,6 +33,7 @@ export default function App(){
       <Testimonials/>
       <Contact/>
       <Footer/>
+  
     </div>
     )}
     </>

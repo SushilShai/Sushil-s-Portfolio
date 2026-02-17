@@ -60,7 +60,7 @@ export default function About() {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <h2 className="text-3xl text-[#1cd8d2] sm:text-4xl lg:text-5xl font-bold">
               Hi, I'm Sushil Shai
             </h2>
 
@@ -90,17 +90,17 @@ export default function About() {
           "
         >
           <div className="text-center space-y-2">
-            <h3 className="text-xl font-semibold">Experience</h3>
+            <h3 className="text-xl text-[#1cd8d2] font-semibold">Experience</h3>
             <p className="text-gray-300 text-sm sm:text-base">2+ Years in Web Development</p>
           </div>
 
           <div className="text-center space-y-2">
-            <h3 className="text-xl font-semibold">Speciality</h3>
+            <h3 className="text-xl text-[#1cd8d2] font-semibold">Speciality</h3>
             <p className="text-gray-300 text-sm sm:text-base">Frontend React, Animations & UI/UX</p>
           </div>
 
           <div className="text-center space-y-2">
-            <h3 className="text-xl font-semibold">Current Focus</h3>
+            <h3 className="text-xl text-[#1cd8d2] font-semibold">Current Focus</h3>
             <p className="text-gray-300 text-sm sm:text-base">Learning Game Dev & Full-Stack Skills</p>
           </div>
         </motion.div>
@@ -113,7 +113,7 @@ export default function About() {
         viewport={{ once: true }}
         className="w-full max-w-4xl mt-8 text-center md:text-left px-2"
       >
-        <h3 className="text-2xl font-semibold mb-3">About Me</h3>
+        <h3 className="text-2xl text-[#1cd8d2] font-semibold mb-3">About Me</h3>
 
         <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
           I'm a developer who loves creating clean, interactive, and meaningful digital 
