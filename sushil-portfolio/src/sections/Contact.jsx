@@ -1,11 +1,52 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 import ContactImg from "../assets/icon/Contact-Us.png";
 import { motion } from "framer-motion";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const Contact = () => {
   const form = useRef();
+  useEffect(() => {
+    gsap.fromTo(".details > *", {
+      opacity: 0,
+      y: 50,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "sine.inOut",
+      stagger: {
+        each: 0.2,
+
+      },
+      scrollTrigger: {
+        trigger: ".details",
+        start: "top 50%",
+        end: "bottom 20%",
+        markers: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.fromTo(".form", {
+      opacity: 0,
+      x: 50,
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      ease: "sine.inOut",
+      scrollTrigger: {
+        trigger: ".form",
+        start: "top 50%",
+        end: "bottom 20%",
+        markers: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, [])
   const socials = [
     { Icon: FaFacebook, label: "FB", href: "https://www.facebook.com/sushil.shahi.7311" },
     { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/h4ku_dai/" },
@@ -59,7 +100,7 @@ export const Contact = () => {
         ))}
       </div>
       {/* Details */}
-      <div className="absolute top-20 left-30 flex flex-col items-center gap-3">
+      <div className="details absolute top-20 left-30 flex flex-col items-center gap-3">
         <h2 className="text-4xl font-bold text-transparent bg-clip-text
             bg-linear-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] drop-shadow-lg">Contact</h2>
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text
@@ -92,7 +133,7 @@ export const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className='absolute right-20 top-1/2 transform -translate-y-1/2 z-20 w-[320px] sm:w-[420px] md:w-[480px] p-6 flex flex-col items-start gap-4 border border-[#1cd8d2] rounded-2xl bg-black/60'
+        className='form absolute right-20 top-1/2 transform -translate-y-1/2 z-20 w-[320px] sm:w-[420px] md:w-[480px] p-6 flex flex-col items-start gap-4 border border-[#1cd8d2] rounded-2xl bg-black/60'
       >
         <h2 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] drop-shadow-lg">ANY PROJECT?</h2>
         <label className='text-[#1cd8d2]'>Name</label>

@@ -42,6 +42,7 @@ const Skills = () => {
         trigger: ".skill-heading",
         start: "top 80%",
         end: "bottom 20%",
+        // markers: true,
         toggleActions: "play none none reverse",
       },
     });
