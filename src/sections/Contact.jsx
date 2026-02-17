@@ -25,7 +25,7 @@ export const Contact = () => {
         trigger: ".details",
         start: "top 50%",
         end: "bottom 20%",
-        markers: true,
+        // markers: true,
         toggleActions: "play none none reverse",
       },
     });
@@ -42,7 +42,7 @@ export const Contact = () => {
         trigger: ".form",
         start: "top 50%",
         end: "bottom 20%",
-        markers: true,
+        // markers: true,
         toggleActions: "play none none reverse",
       },
     });
