@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import Home from "./sections/Home"
 import About from "./sections/About"
 import Skills from "./sections/Skills"
+import TextAnimation from "./components/TextAnimation"
 import Projects from "./sections/Projects"
 import Experience from "./sections/Experience"
 import Testimonials from "./sections/Testimonials"
@@ -28,6 +29,7 @@ export default function App(){
       <Home/>
       <About/>
       <Skills/>
+      <TextAnimation />
       <Projects/>
       <Experience/>
       <Testimonials/>
