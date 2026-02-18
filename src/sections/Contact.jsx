@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const Contact = () => {
   const form = useRef();
   useEffect(() => {
@@ -16,15 +18,15 @@ export const Contact = () => {
       opacity: 1,
       y: 0,
       duration: 0.8,
-      ease: "sine.inOut",
+      ease: "power4.inOut",
       stagger: {
         each: 0.2,
 
       },
       scrollTrigger: {
         trigger: ".details",
-        start: "top 50%",
-        end: "bottom 20%",
+        start: "top -110%",
+        end: "bottom -80%",
         // markers: true,
         toggleActions: "play none none reverse",
       },
@@ -37,11 +39,11 @@ export const Contact = () => {
       opacity: 1,
       x: 0,
       duration: 0.8,
-      ease: "sine.inOut",
+      ease: "power4.inOut",
       scrollTrigger: {
         trigger: ".form",
-        start: "top 50%",
-        end: "bottom 20%",
+        start: "top -110%",
+        end: "bottom -80%",
         // markers: true,
         toggleActions: "play none none reverse",
       },

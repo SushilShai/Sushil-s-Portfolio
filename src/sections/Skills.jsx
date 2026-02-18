@@ -1,15 +1,16 @@
 import React, { useEffect } from "react"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import TestAnimation from '../components/TextAnimation';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const glows = [
-    "-top-10 -left-10 w-[260px] h-[260px] opacity-20 blur-[100px]",
-    "bottom-0 right-10 w-[340px] h-[340px] opacity-15 blur-[120px] delay-300",
-    "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] h-[180px] opacity-10 blur-[90px]",
-  ];
+  "-top-10 -left-10 w-[260px] h-[260px] opacity-20 blur-[100px]",
+  "bottom-0 right-10 w-[340px] h-[340px] opacity-15 blur-[120px] delay-300",
+  "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] h-[180px] opacity-10 blur-[90px]",
+];
 
 const Skills = () => {
   useEffect(() => {
@@ -48,9 +49,11 @@ const Skills = () => {
     });
   }, [])
   return (
-   <section id="skills"
+    <section id="skills"
       className="min-h-screen w-full flex items-center justify-center relative bg-black text-white overflow-hidden px-4 sm:px-6 md:px-10">
-    {/* Glowing Background */}
+      
+      {/* Glowing Background */}
+
       <div className="absolute inset-0 pointer-events-none">
         {glows.map((c, i) => (
           <div
@@ -59,17 +62,42 @@ const Skills = () => {
           ></div>
         ))}
       </div>
-      <div className=" skill-container relative flex flex-col items-center justify-center gap-10 max-w-6xl w-full z-10 mx-auto h-full py-20 ">
+      <div className=" skill-container relative flex flex-col items-center justify-center gap-40 max-w-6xl w-full z-10 mx-auto h-full py-20 ">
         <h2 className=" skill-heading text-4xl text-[#1cd8d2] font-bold mb-12">Skills</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 w-full">
+
           {/*Skill Item */}
+
+          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
+            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
+              <img src="/src/assets/icon/5968350.png" alt="Python" className="w-12 h-12" />
+              <span className="text-sm font-medium">Python</span>
+            </div>
+          </div>
+          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
+            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
+              <img src="/src/assets/icon/5968332.png" alt="php" className="w-12 h-12" />
+              <span className="text-sm font-medium">PHP</span>
+            </div>
+          </div>
+          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
+            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
+              <img src="/src/assets/icon/React-icon.svg.png" alt="React" className="w-12 h-12" />
+              <span className="text-sm font-medium">React</span>
+            </div>
+          </div>
+          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
+            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
+              <img src="/src/assets/icon/rust-logo-512x512.png" alt="Rust" className="w-12 h-12" />
+              <span className="text-sm font-medium">Rust</span>
+            </div>
+          </div>
           <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-2 p-4 bg-transparent rounded-lg shadow-md">
             <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
               <img src="/src/assets/icon/html 5.png" alt="HTML" className="w-12 h-12" />
               <span className="text-sm font-medium">HTML</span>
             </div>
           </div>
-          {/* Add more skill items*/}
           <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-2 p-4 bg-transparent rounded-lg shadow-md">
             <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
               <img src="/src/assets/icon/bootstrap-social-media-icons-html-css-js-logo-11563293145uql7yehdq3.png" alt="CSS" className="w-12 h-12" />
@@ -82,12 +110,7 @@ const Skills = () => {
               <span className="text-sm font-medium">JavaScript</span>
             </div>
           </div>
-          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
-            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
-              <img src="/src/assets/icon/React-icon.svg.png" alt="React" className="w-12 h-12" />
-              <span className="text-sm font-medium">React</span>
-            </div>
-          </div>
+
           <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
             <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
               <img src="/src/assets/icon/Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" className="w-12 h-12" />
@@ -106,27 +129,9 @@ const Skills = () => {
               <span className="text-sm font-medium">Express.js</span>
             </div>
           </div>
-          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
-            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
-              <img src="/src/assets/icon/5968350.png" alt="Python" className="w-12 h-12" />
-              <span className="text-sm font-medium">Python</span>
-            </div>
-          </div>
-          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
-            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
-              <img src="/src/assets/icon/5968332.png" alt="php" className="w-12 h-12" />
-              <span className="text-sm font-medium">PHP</span>
-            </div>
-          </div>
-          <div className="skill group hover:z-10 cursor-pointer flex flex-col items-center gap-1 p-2 bg-transparent rounded-lg shadow-md">
-            <div className="transform transition-transform duration-300 ease-out group-hover:scale-110 flex flex-col items-center">
-              <img src="/src/assets/icon/rust-logo-512x512.png" alt="Rust" className="w-12 h-12" />
-              <span className="text-sm font-medium">Rust</span>
-            </div>
-          </div>
         </div>
       </div>
-   </section>
+    </section>
   )
 }
 
