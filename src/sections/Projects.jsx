@@ -5,12 +5,13 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
+
  gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
 
   const projects = [{
-    image1: 'src/assets/boy.jpg',
+    image1: '../src/assets/boy.jpg',
     image2: 'src/assets/Astra.png'
   },{
     image1: 'src/assets/avator.png',
@@ -49,19 +50,23 @@ const Projects = () => {
     
 
   return (
-  
+
+  <section className="h-[275vh] w-full bg-black  ">
     <div className="p-2 bg-black">
       <div className='pt-[25vh]'>
-        <h2 className='text-[9.5vw] uppercase text-[#1cd8d2]'>Projets</h2>
+        <h2 className='text-[9.5vw] uppercase text-[#1cd8d2] flex justify-center'>Projets</h2>
       </div>
         <div className='-mt-12 parent'>
           {projects.map((elem, index) => (
-             <div key={index} className='hero w-full h-[700px] mb-4 flex gap-4 '>
+             <div key={index} className='hero w-full h-[700px] mb-4 flex gap-4 relative '>
             <ProjectCard  image1={elem.image1} image2={elem.image2} />
           </div>
           ))}
       </div>
     </div>
+
+    </section>
+  
   )
 }
 
