@@ -5,7 +5,7 @@ import Skills from "./sections/Skills"
 import TextAnimation from "./components/TextAnimation"
 import Projects from "./sections/Projects"
 import Experience from "./sections/Experience"
-import BackEnd from "./sections/BackEnd"
+// import BackEnd from "./sections/BackEnd"
 import Testimonials from "./sections/Testimonials"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
@@ -45,7 +45,7 @@ export default function App(){
       <TextAnimation />
       <Projects/>
       <Experience/>
-      <BackEnd/>
+      {/* <BackEnd/> */}
       <Testimonials/>
       <Contact/>
       <Footer/>

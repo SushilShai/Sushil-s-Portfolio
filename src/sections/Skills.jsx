@@ -63,7 +63,7 @@ const Skills = () => {
         ))}
       </div>
       <div className=" skill-container relative flex flex-col items-center justify-center gap-40 max-w-6xl w-full z-10 mx-auto h-full py-20 ">
-        <h2 className=" skill-heading text-4xl text-[#1cd8d2] font-bold mb-12">Skills</h2>
+        <h2 className=" skill-heading text-7xl text-[#1cd8d2] font-bold mb-12 uppercase">Skills</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 w-full">
 
           {/*Skill Item */}

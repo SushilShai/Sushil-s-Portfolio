@@ -39,7 +39,7 @@ const BackEnd = () => {
         })
     }, [])
   return (
-    <section className='Back bg-black h-screen w-full flex flex-row'>
+    <section className='Back bg-black h-screen w-full flex flex-row overflow-hidden'>
         <div className='ls h-screen w-full bg-gray-900 flex items-center'>
             <h1 className='text-7xl font-[font-1] ml-60 transition-all text-white'>BackEnd</h1>
         </div>

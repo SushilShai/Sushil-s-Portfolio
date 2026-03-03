@@ -25,7 +25,7 @@ export const Contact = () => {
       },
       scrollTrigger: {
         trigger: ".details",
-        start: "top -110%",
+        start: "top 70%",
         end: "bottom -80%",
         // markers: true,
         toggleActions: "play none none reverse",
@@ -42,9 +42,9 @@ export const Contact = () => {
       ease: "power4.inOut",
       scrollTrigger: {
         trigger: ".form",
-        start: "top -110%",
+        start: "top 80%",
         end: "bottom -80%",
-        // markers: true,
+        markers: true,
         toggleActions: "play none none reverse",
       },
     });
