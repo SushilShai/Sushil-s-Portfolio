@@ -103,7 +103,7 @@ export const Contact = () => {
         <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] drop-shadow-lg">
           +977 9818086423
         </h2>
-        <h4 className="text-5xl text-[#1cd8d2]">info@sushilshai.com.np</h4>
+        <h4 className="text-5xl text-[#1cd8d2]">hello@sushilshai.com.np</h4>
         <div className="mt-10 flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start">
           {socials.map(({ Icon, label, href }) => (
             <motion.a
