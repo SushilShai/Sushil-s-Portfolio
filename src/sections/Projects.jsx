@@ -38,7 +38,6 @@ const Projects = () => {
 
       scrollTrigger:{
         trigger:'.parent',
-        // markers: true,
         start:"top 100%",
         end:"top -150%",
         scrub: true,

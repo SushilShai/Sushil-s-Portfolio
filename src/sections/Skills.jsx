@@ -27,7 +27,6 @@ const Skills = () => {
         trigger: ".skill-container",
         start: "top 60%",
         end: "bottom 20%",
-        // markers: true,
         toggleActions: "play none none reverse",
       },
     });
@@ -43,7 +42,6 @@ const Skills = () => {
         trigger: ".skill-heading",
         start: "top 80%",
         end: "bottom 20%",
-        // markers: true,
         toggleActions: "play none none reverse",
       },
     });

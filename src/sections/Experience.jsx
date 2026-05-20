@@ -18,7 +18,6 @@ const Experience = () => {
         scrollTrigger: {
                 trigger: "#experience",
                 scroller: "body",
-                // markers: true,
                 start: "top 0%",
                 end: "bottom 20%",
                 scrub: 1,
