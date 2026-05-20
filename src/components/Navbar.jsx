@@ -10,7 +10,6 @@ export default function Navbar() {
 
   const lastScrollY = useRef(0);
 
-  // ---- Detect when Home section is visible (Navbar always stays visible) ----
   useEffect(() => {
     const homeSection = document.querySelector("#home");
 
