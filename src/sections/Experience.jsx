@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import PartidesBackground from "../components/PartidesBackground";
 
-
+import fist from '../assets/1336647257.png'
 gsap.registerPlugin(ScrollTrigger)
 
 const Experience = () => {
@@ -124,12 +124,12 @@ const Experience = () => {
         <div className='ex5 relative z-60 pointer-events-none w-1/2 h-[55vw] mb-4 flex flex-col bg-white text-black  mx-420 -mt-205 items-center justify-center'>
             <h1 className='uppercase text-7xl ml-160'>Back</h1>
             <h1 className='uppercase text-7xl ml-165'>Deve</h1>
-            <img src='src/assets/1336647257.png' alt="fist" className="ml-167 w-1/4 h-1/4 mt-4" />
+            <img src={fist} alt="fist" className="ml-167 w-1/4 h-1/4 mt-4" />
         </div>
         <div className='ex6 relative z-60 pointer-events-none w-1/2 h-[55vw] mb-4 flex flex-col bg-white text-black mx-630 -mt-238 items-center justify-center'>
             <h1 className='uppercase text-7xl mr-174 mt-1'>End</h1>
             <h1 className='uppercase text-7xl mr-155 '>loper</h1>
-            <img src='src/assets/1336647257.png' alt="fist" className="mr-165 w-1/4 h-1/4 mt-4 transform scale-x-[-1] " />
+            <img src={fist} alt="fist" className="mr-165 w-1/4 h-1/4 mt-4 transform scale-x-[-1] " />
         </div>
         </div>
       </div>

@@ -120,7 +120,7 @@ const Testimonials = () => {
         </div>
 
         <div
-          className='h-120 w-90 bg-red-500 flex flex-col relative'
+          className='h-120 w-90 bg-red-500 overflow-hidden flex flex-col relative'
           style={{
             backgroundImage: `url(${pcImg})`,
             backgroundSize: '300% 100%',
