@@ -23,42 +23,40 @@ const glows = [
 
 const Skills = () => {
   useEffect(() => {
-    gsap.fromTo(
-      ".skill",
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "sine.inOut",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".skill-container",
-          start: "top 60%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".skill-heading",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.8,
-        ease: "sine.inOut",
-        scrollTrigger: {
-          trigger: ".skill-heading",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  }, []);
-
+    gsap.fromTo(".skill", {
+      opacity: 0,
+      y: 50,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "sine.inOut",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".skill-container",
+        start: "top 60%",
+        end: "bottom 20%",
+        // markers: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+    gsap.fromTo(".skill-heading", {
+      opacity: 0,
+      x: 50,
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      ease: "sine.inOut",
+      scrollTrigger: {
+        trigger: ".skill-heading",
+        start: "top 80%",
+        end: "bottom 20%",
+        // markers: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, [])
   return (
     <section
       id="skills"

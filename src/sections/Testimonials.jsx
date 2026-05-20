@@ -14,7 +14,6 @@ const Testimonials = () => {
       scrollTrigger: {
         trigger: '.test',
         scroller: 'body',
-        markers: true,
         start: 'top top',
         end: '+=100',
         scrub: 1,
