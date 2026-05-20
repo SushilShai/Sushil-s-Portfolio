@@ -7,28 +7,71 @@ import PartidesBackground from "../components/PartidesBackground";
 gsap.registerPlugin(ScrollTrigger)
 
 const Experience = () => {
-    useGSAP(() => {
-      const tl = gsap.timeline({
-        onComplete: () => {
-          tl.restart();
-        }
-      })
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#experience',
+        scroller: 'body',
+        // markers: true,
+        start: 'top 0%',
+        end: 'bottom 10%',
+        scrub: 1,
+        pin: true,
+      }
+    })
 
+    // move the main container horizontally as the user scrolls
+    tl.to('.main', {
+      xPercent: -100,
+      ease: 'none',
+    })
 
-      gsap.to('.main', {
-        transform: 'translateX(-100%)',
-        scrollTrigger: {
-                trigger: "#experience",
-                scroller: "body",
-                // markers: true,
-                start: "top 0%",
-                end: "bottom 20%",
-                scrub: 1,
-                pin: true,
-              },
-    
-      })
-    }, [])
+    // after the main movement begins, smoothly zoom out ex3 & ex4
+    tl.to(['.ex3', '.ex4'], {
+      scale: 0.8,
+      duration: 1.2,
+      ease: 'power2.out',
+      transformOrigin: '50% 50%'
+    }, '+=0.15')
+
+    // reveal ex5 and ex6 simultaneously with smoother easing
+    tl.addLabel('revealEnd', '+=0.15')
+
+    tl.fromTo('.ex5', {
+      opacity: 0,
+      x: -800,
+      scale: 0.98,
+    }, {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      duration: 1.1,
+      ease: 'power2.out',
+      onStart: () => {
+        const el = document.querySelector('.endDiv')
+        if (el) el.style.zIndex = '100'
+      }
+    }, 'revealEnd')
+
+    tl.fromTo('.ex6', {
+      opacity: 0,
+      x: 800,
+      scale: 0.98,
+      zIndex: 0,
+    }, {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      zIndex: 100,
+      duration: 1.1,
+      ease: 'power2.out',
+      onStart: () => {
+        const el = document.querySelector('.endDiv')
+        if (el) el.style.zIndex = '100'
+      }
+    }, 'revealEnd')
+
+  }, [])
   return (
     <section id='experience' className='pt-2 h-screen relative flex flex-col gap-5 bg-black overflow-hidden'>
       <PartidesBackground />

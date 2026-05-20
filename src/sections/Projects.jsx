@@ -29,16 +29,12 @@ const Projects = () => {
 
   useGSAP(() => {
     gsap.from('.hero', {
-      height:'50px',
-      stagger:{
-        amount: 0.2,
-      },
-
-      scrollTrigger:{
-        trigger:'.parent',
-        // markers: true,
-        start:"top 100%",
-        end:"top -150%",
+      height: '50px',
+      stagger: { amount: 0.2 },
+      scrollTrigger: {
+        trigger: '.parent',
+        start: "top 100%",
+        end: "top -150%",
         scrub: true,
         triggerActions: "play none none reverse",
       },
